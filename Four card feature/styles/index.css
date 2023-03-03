@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: 1rem;
+    color: var(--VeryDarkBlue);
+}
+
+main > h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.92rem;
+    font-weight: 200;
+}
+
+.ai {
+    margin: 20px 0 75px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--GrayishBlue);
+}
+
+.card-supervisor {
+    border-top: 5px solid var(--Cyan);
+    grid-area: card-s;
+}
+.card-team-builder {
+    border-top: 5px solid var(--Red);
+    grid-area: card-t;
+}
+.card-karma {
+    border-top: 5px solid var(--Orange);
+    grid-area: card-k;
+}
+.card-calc {
+    border-top: 5px solid var(--Blue);
+    grid-area: card-c;
+}
+
+.card-supervisor, .card-team-builder, .card-karma, .card-calc {
+    text-align: start;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2),
+                -8px -8px 16px rgba(0, 0, 0, 0.2),
+                0px 8px 16px rgba(0, 0, 0, 0.2),
+                0px -8px 16px rgba(0, 0, 0, 0);
+}
+
+.card-supervisor > .details > h2, .card-team-builder > .details > h2, .card-karma > .details > h2, .card-calc > .details > h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-supervisor > .img , .card-team-builder > .img , .card-karma > .img , .card-calc > .img {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.card-para {
+    color: var(--GrayishBlue);
+    font-weight: 400;
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards-container {
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 80rem;
+        grid-template-areas:
+            "card-s  card-t  card-c"
+            "card-s card-k card-c";
+    }
+
+    .ai {
+        max-width: 55ch;
+    }
+}

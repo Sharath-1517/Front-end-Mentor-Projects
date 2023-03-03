@@ -1,0 +1,39 @@
+@import 'config';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $body-bg;
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+
+    &-info {
+        padding: 15px;
+    }
+}
+
+.improve-text{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $dark-blue;
+}
+
+.scan-text {
+    font-weight: 400;
+    margin: 10px;
+    color: $font-color;
+}
+
+.qr {
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
