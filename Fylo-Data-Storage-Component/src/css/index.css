@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+.logo-upload-section {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px 100px 10px 10px;
+  padding: 30px 50px 30px 30px;
+  margin: 0 20px;
+}
+
+.icon {
+  padding: 10px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+
+.upload-icons {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin-top: 20px;
+}
+
+.cloud-img {
+  padding: 14px 10px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  padding: 40px 30px;
+  margin: 15px 20px;
+  position: relative;
+}
+.data-usage {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+.data-slider {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.data-remaining {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: hsl(243, 100%, 93%);
+  top: 130px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.data-remaining h2 {
+  display: flex;
+  align-items: center;
+  color: hsl(229, 57%, 11%);
+}
+.data-remaining h2 strong {
+  font-size: 2rem;
+}
+.data-remaining h2 span {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.slider {
+  margin-bottom: 7px;
+  width: 100%;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    background-image: url(/images/bg-mobile.png);
+  }
+  .desktop-bg {
+    display: none;
+  }
+}
+@media screen and (min-width: 377px) {
+  body {
+    background-color: hsl(229, 57%, 11%);
+  }
+  .logo-upload-section {
+    padding-right: 150px;
+  }
+  .upload-icons {
+    margin-bottom: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -230px;
+    z-index: 1;
+  }
+  .desktop-bg {
+    position: relative;
+    width: 100%;
+    top: 93px;
+  }
+  .data {
+    width: 80ch;
+  }
+  .data-usage {
+    display: flex;
+    align-self: self-start;
+  }
+  .data-remaining {
+    top: -50px;
+    right: 50px;
+  }
+}/*# sourceMappingURL=index.css.map */
